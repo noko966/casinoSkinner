@@ -44,7 +44,7 @@ const dataset = [
     { inputs: hexToRgb('#85f1ff'), outputs: [0] }, 
     { inputs: hexToRgb('#000000'), outputs: [1] },
     { inputs: hexToRgb('#00E777'), outputs: [0] },
-
+    { inputs: hexToRgb('#00b45d'), outputs: [0] },
 ];
 
 const inputs = [new Neuron(), new Neuron(), new Neuron()]; // Input Layer w/ 3 neurons

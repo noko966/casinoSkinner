@@ -15,9 +15,12 @@ function createTheme(config) {
     let generateDarkTints = _config.generateDarkTints || false;
     let generateCustomBodyDarkTints = _config.generateCustomBodyDarkTints || false;
 
+    let customCasinoAccent = Boolean(_config.customCasinoAccent) || false;
+
     let leafView = _config.leafView || false;
 
-    let accent, accentTxt, popupHeaderBg, popupHeaderTxt, tabBg, tabTxt, accent2, borderRadius, headerBg;
+    let accent, accentTxt, popupHeaderBg, popupHeaderTxt, tabBg, tabTxt, accent2, borderRadius, headerBg, customCasinoAccentBg, customCasinoAccentBgHov, customCasinoAccentTxt;
+
     let primaryBg = _config.primaryBg;
     let spacing = _config.spacing || 2;
 
@@ -41,8 +44,18 @@ function createTheme(config) {
         accentTxt = guessVisibleColor(accent);
     }
 
-    let primaryBgTransparent = transparentize(0.123, primaryBg);
+    if (customCasinoAccent) {
+        customCasinoAccentBg = _config.customCasinoAccent;
+        customCasinoAccentBgHov = darken(.1, customCasinoAccentBg);
+        customCasinoAccentTxt = guessVisibleColor(customCasinoAccentBg);
+    }
+    else{
+        customCasinoAccentBg = accent;
+        customCasinoAccentBgHov = accent2;
+        customCasinoAccentTxt = accentTxt;
+    }
 
+    let primaryBgTransparent = transparentize(0.123, primaryBg);
 
     let primaryTxt = guessVisibleColor(primaryBg);
 
@@ -84,12 +97,12 @@ function createTheme(config) {
         headerBg = _config.headerBg;
         headerTxt = guessVisibleColor(headerBg);
         headerTxt2 = headerTxt === "#000" ?
-        lighten(0.3, headerTxt) :
-        darken(0.3, headerTxt);
+            lighten(0.3, headerTxt) :
+            darken(0.3, headerTxt);
     } else {
         headerBg = customBodyBg;
         headerTxt = customBodyTxt;
-        headerTxt2 = customBodyTxt2;  
+        headerTxt2 = customBodyTxt2;
     }
 
     //create footer
@@ -156,21 +169,13 @@ function createTheme(config) {
         accentTxt: accentTxt,
 
         borderRadius: borderRadius,
+
+        customCasinoAccent: customCasinoAccent,
+        customCasinoAccentBg: customCasinoAccentBg,
+        customCasinoAccentBgHov: customCasinoAccentBgHov,
+        customCasinoAccentTxt: customCasinoAccentTxt
     }
 }
 
 module.exports.createTheme = createTheme;
 
-
-
-// function addThemeCriteria(config) {
-//     let criteria = config;
-
-//     if () {
-
-//     } else {
-
-//     }
-
-//     return theme
-// }

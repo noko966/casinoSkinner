@@ -8,22 +8,23 @@ const { createTheme } = require('./utils/createTheme')
 
 let configs = [
   {
-    fileName: 'grey',
-    primaryBg: '#343434',
-    accent:'#f14100',
-    borderRadius: '8',
-    spacing: '4',
-    generateDarkTints: true,
-  },
-  {
-    fileName: 'light',
-    primaryBg: '#fff',
-    accent:'#ffb700',
+    fileName: 'cb',
+    primaryBg: '#1a1a1a',
+    accent:'#00b45d',
     borderRadius: '2',
     spacing: '4',
-    generateDarkTints: true,
-    headerBg: '#f00'
-  }
+    generateDarkTints: false,
+    customCasinoAccent: '#ffb700'
+  },
+  // {
+  //   fileName: 'light',
+  //   primaryBg: '#fff',
+  //   accent:'#ffb700',
+  //   borderRadius: '2',
+  //   spacing: '4',
+  //   generateDarkTints: true,
+  //   headerBg: '#f00'
+  // }
 ];
 
 
