@@ -15,10 +15,23 @@ body{
 .loader{
 
 }
-.tl_logo a {
+.tl_logo a,
+.active .header__left__logo {
     background-image: url(/Img/partners/111/logoBig.png);
     width: ${c.logoWidth}px;
     height: 32px;
+}
+.header__left__logo{
+    background-image: url(/Img/partners/111/logoSm.png);
+    width: 50px;
+    height: 32px;
+}
+@media screen and (max-width: 1500px){
+    .tl_logo a {
+        background-image: url(/Img/partners/111/logoSm.png);
+        width: 50px;
+        height: 32px;
+    }
 }
 .tl_logo_space_imitator{
     width: ${c.logoWidth}px;
@@ -47,12 +60,14 @@ a.tl_btn:hover,
 }
 
 .tl_btn-accent,
-a.tl_btn-accent {
+a.tl_btn-accent,
+.add_game_popup .moregame {
     background-color: ${c.accent};
     color: ${c.accentTxt};
 }
 .tl_btn-accent:hover,
-a.tl_btn-accent:hover {
+a.tl_btn-accent:hover,
+.add_game_popup .moregame:hover {
     background-color: ${c.accent2};
     color: ${c.accentTxt};
 }
@@ -83,6 +98,18 @@ a.tl_dropdown_style:hover {
 .tl_header_bot_row {
     padding-left: 16px;
     padding-right: 16px;
+}
+a.tl_simple_link-accent {
+    background-color: ${c.primaryBg3};
+    height: 35px;
+    line-height:35px;
+    padding: 0 8px;
+    color: ${c.accent};
+    border-radius: ${c.borderRadius}px;
+}
+a.tl_simple_link-accent:hover{
+    background-color: ${c.primaryBg3Hov};
+    color: ${c.accent};
 }
 /*links*/
 .tl_simple_link {
@@ -119,7 +146,10 @@ a.tl_dropdown_style:hover {
 .tl_promoted {
     position: relative;
 }
-.tl_promoted:after {
+.tl_promoted:after,
+.New:after,
+.promoted:after,
+.tl_game_tab_item.New:after {
     position: absolute;
     top: 0;
     right: 0;
@@ -134,8 +164,12 @@ a.tl_dropdown_style:hover {
     font-weight: 500;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
+    background: none;
 }
-.tl_promoted:after {
+.tl_promoted:after,
+.New:after,
+.promoted:after,
+.tl_game_tab_item.New:after {
     background-color:${c.accent};
     color:${c.accentTxt};
 }
@@ -204,6 +238,10 @@ a.tl_dropdown_style:hover {
 .top_winners__value,
 .top_winners__date  {
     color: ${c.accent};
+}
+.me_badge{
+    background-color: ${c.accent};
+    color: ${c.accentTxt} !important;
 }
 .top_winners__game{
     border-color:${c.customBodyBg2};
@@ -365,8 +403,7 @@ a.tl_dropdown_style:hover {
 }
 .filter_search{
     background-color: ${c.primaryBg3};
-    color: ${c.primaryBg2};
-
+    color: ${c.primaryTxt2};
 }
 .filter_search_content {
     color: ${c.primaryTxt};
@@ -376,7 +413,7 @@ a.tl_dropdown_style:hover {
     color: ${c.primaryTxt2};
 }
 .games_filter_element:hover,
-.games_filter_element.active, {
+.games_filter_element.active {
     background-color: ${c.accent};
     color: ${c.accentTxt};
 }
@@ -428,18 +465,6 @@ a.tl_dropdown_style:hover {
 }
 .add__games_popup .tl_game_tabs_menu .tl_game_tab_item.active {
     color: ${c.accent};
-}
-.tl_game_tab_item.New::after {
-    content: 'new';
-    width: 23px;
-    height: 12px;
-    line-height: 12px;
-    background: none;
-    background-color: ${c.accent};
-    color: ${c.accentTxt};
-    font-size: 10px;
-    text-align: center;
-    border-radius:${c.borderRadius * 2}px;
 }
 .add__games_popup .search__block {
     background-color: ${c.customBodyBg};
@@ -652,6 +677,22 @@ a.tl_dropdown_style:hover {
     background-color: ${c.accent2};
     color: ${c.accentTxt};
 }
+.close_games_content,
+.add__game,
+.add__game_button,
+.left__menu{
+    background-color:${c.primaryBgTransparent};
+    color:${c.primaryTxt};
+}
+.last__winners .item__img{
+    background-color:${c.primaryBg};
+    color:${c.primaryTxt};
+}
+.star__icon.favoriteGames_delete,
+.tl_typography_accent{
+    color: ${c.accent};
+}
+
 
 ${c.customCasinoAccent ? `   
     /*different casino accent and logo*/
@@ -660,23 +701,40 @@ ${c.customCasinoAccent ? `
     }
     
     .tl_casino_page .tl_btn-accent,
+    .tl_casino_page .add_game_popup .moregame,
     .tl_casino_page .a.tl_btn-accent,
     .tl_casino_page .tl_promoted:after,
+    .tl_casino_page .New:after,
+    .tl_casino_page .tl_game_tab_item.New:after,
+    .tl_casino_page .promoted:after,
     .tl_casino_page .game__link_real,
     .tl_casino_page .tl_badge,
     .tl_casino_page .tl_payment_block .tl_deposit_button,
-    .tl_casino_page .tl_search_button {
+    .tl_casino_page .tl_search_button,
+    .tl_casino_page .games_filter_element:hover,
+    .tl_casino_page .games_filter_element.active,
+    .tl_casino_page .games_filter_show,
+    .tl_casino_page .me_badge{
         background-color: ${c.customCasinoAccentBg};
         color: ${c.customCasinoAccentTxt};
     }
     
     .tl_casino_page .tl_btn-accent:hover,
     .tl_casino_page a.tl_btn-accent:hover,
+    .tl_casino_page .add_game_popup .moregame:hover,
     .tl_casino_page .game__link_real:hover,
-    .tl_payment_block .tl_deposit_button:hover,
-    .tl_payment_block .tl_search_button:hover {
+    .tl_casino_page .tl_payment_block .tl_deposit_button:hover,
+    .tl_payment_block .tl_search_button:hover,
+    .tl_payment_block .games_filter_show:hover {
         background-color: ${c.customCasinoAccentBgHov};
         color: ${c.customCasinoAccentTxt};
+    }
+
+    .tl_casino_page a.tl_simple_link-accent,
+    .tl_casino_page a.tl_simple_link-accent:hover,
+    .tl_casino_page .top_winners__value,
+    .tl_casino_page .top_winners__date {
+        color: ${c.customCasinoAccentBg};
     }
     
     .tl_casino_page .tl_main_nav_item:hover,
@@ -689,7 +747,8 @@ ${c.customCasinoAccent ? `
     .tl_casino_page .tl_casino_navigation_tab:hover,
     .tl_casino_page .tl_casino_subnavigation_item.active,
     .tl_casino_page .tl_casino_subnavigation_item:hover,
-    .tl_casino_page .top_winners__value {
+    .tl_casino_page .top_winners__value,
+    .tl_casino_page .star__icon.favoriteGames_delete {
         color: ${c.customCasinoAccentBg};
     }` : ''
 }
