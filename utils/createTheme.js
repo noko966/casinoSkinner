@@ -11,13 +11,25 @@ function createTheme(config) {
 
     let _config = config || {};
 
-    let logoWidth = _config.logoWidth || 150;
     let generateDarkTints = _config.generateDarkTints || false;
     let generateCustomBodyDarkTints = _config.generateCustomBodyDarkTints || false;
 
     let customCasinoAccent = Boolean(_config.customCasinoAccent) || false;
 
     let leafView = _config.leafView || false;
+
+    let defaultLogo = {
+        big: "/Img/partners/1/big.png", 
+        small: "/Img/partners/1/small.png",
+        widthBig: 150,
+        heightBig: 32,
+        widthSmall: 50,
+        heightSmall: 32,
+        };
+    
+    let logoConfig = _config.logo || {};
+
+    let logo = Object.assign(defaultLogo, logoConfig);
 
     let accent, accentTxt, popupHeaderBg, popupHeaderTxt, tabBg, tabTxt, accent2, borderRadius, headerBg, customCasinoAccentBg, customCasinoAccentBgHov, customCasinoAccentTxt;
 
@@ -48,8 +60,7 @@ function createTheme(config) {
         customCasinoAccentBg = _config.customCasinoAccent;
         customCasinoAccentBgHov = darken(.1, customCasinoAccentBg);
         customCasinoAccentTxt = guessVisibleColor(customCasinoAccentBg);
-    }
-    else{
+    } else {
         customCasinoAccentBg = accent;
         customCasinoAccentBgHov = accent2;
         customCasinoAccentTxt = accentTxt;
@@ -124,7 +135,8 @@ function createTheme(config) {
     return {
         fileName: _config.fileName,
         leafView: leafView,
-        logoWidth: logoWidth,
+
+        logo: logo,
 
         spacing: spacing,
 
@@ -178,4 +190,3 @@ function createTheme(config) {
 }
 
 module.exports.createTheme = createTheme;
-

@@ -17,24 +17,20 @@ body{
 }
 .tl_logo a,
 .active .header__left__logo {
-    background-image: url(/Img/partners/111/logoBig.png);
-    width: ${c.logoWidth}px;
-    height: 32px;
+    background-image: url(${c.logo.big});
+    width: ${c.logo.widthBig}px;
+    height: ${c.logo.heightBig}px;
 }
-.header__left__logo{
-    background-image: url(/Img/partners/111/logoSm.png);
-    width: 50px;
-    height: 32px;
-}
+
 @media screen and (max-width: 1500px){
     .tl_logo a {
-        background-image: url(/Img/partners/111/logoSm.png);
-        width: 50px;
-        height: 32px;
+        background-image: url(${c.logo.small});
+        width: ${c.logo.widthSmall}px;
+        height: ${c.logo.heightSmall}px;
     }
 }
 .tl_logo_space_imitator{
-    width: ${c.logoWidth}px;
+    width: ${c.logo.widthBig}px;
     flex-shrink: 0;
 }
 .tl_btn,
@@ -61,13 +57,15 @@ a.tl_btn:hover,
 
 .tl_btn-accent,
 a.tl_btn-accent,
-.add_game_popup .moregame {
+.add_game_popup .moregame,
+.tl_gh .tl_search_button {
     background-color: ${c.accent};
     color: ${c.accentTxt};
 }
 .tl_btn-accent:hover,
 a.tl_btn-accent:hover,
-.add_game_popup .moregame:hover {
+.add_game_popup .moregame:hover,
+.tl_gh .tl_search_button:hover {
     background-color: ${c.accent2};
     color: ${c.accentTxt};
 }
@@ -692,6 +690,30 @@ a.tl_simple_link-accent:hover{
 .tl_typography_accent{
     color: ${c.accent};
 }
+
+.tl_gh .tl_gh_result .tl_gh_result_heading{
+    background-color:${c.customBodyBg2};
+    color:${c.customBodyTxt2};
+}
+.tl_gh .tl_gh_result .tl_gh_result_item:nth-child(even) {
+    background-color:${c.customBodyBg3};
+    color:${c.customBodyTxt};
+}
+.tl_gh .tl_gh_result .tl_gh_result_item:nth-child(odd) {
+    background-color:${c.customBodyBg3Hov};
+    color:${c.customBodyTxt};
+}
+.paging li > .pi{
+    color:${c.customBodyTxt2};
+}
+.paging li > .pi.page{
+    color:${c.customBodyTxt};
+}
+.paging li > .pi.page:hover,
+.paging li > .pi.active{
+    background-color:${c.customBodyBg2};
+}
+
 
 
 ${c.customCasinoAccent ? `   

@@ -14,7 +14,15 @@ let configs = [
     borderRadius: '2',
     spacing: '4',
     generateDarkTints: false,
-    customCasinoAccent: '#ffb700'
+    customCasinoAccent: '#ffb700',
+    logo: {
+      big: "/Img/partners/111/logoBig.png",
+      small: "/Img/partners/111/logoSm.png",
+      widthBig: 150,
+      heightSmall: 32,
+      widthSmall: 50,
+      heightSmall: 32,
+    },
   },
   {
     fileName: 'oynabet',

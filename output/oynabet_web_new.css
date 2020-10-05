@@ -10,18 +10,14 @@ body{
 }
 .tl_logo a,
 .active .header__left__logo {
-    background-image: url(/Img/partners/111/logoBig.png);
+    background-image: url(/Img/partners/1/big.png);
     width: 150px;
     height: 32px;
 }
-.header__left__logo{
-    background-image: url(/Img/partners/111/logoSm.png);
-    width: 50px;
-    height: 32px;
-}
+
 @media screen and (max-width: 1500px){
     .tl_logo a {
-        background-image: url(/Img/partners/111/logoSm.png);
+        background-image: url(/Img/partners/1/small.png);
         width: 50px;
         height: 32px;
     }
@@ -54,13 +50,15 @@ a.tl_btn:hover,
 
 .tl_btn-accent,
 a.tl_btn-accent,
-.add_game_popup .moregame {
+.add_game_popup .moregame,
+.tl_gh .tl_search_button {
     background-color: #F27404;
     color: #fff;
 }
 .tl_btn-accent:hover,
 a.tl_btn-accent:hover,
-.add_game_popup .moregame:hover {
+.add_game_popup .moregame:hover,
+.tl_gh .tl_search_button:hover {
     background-color: #c05c03;
     color: #fff;
 }
@@ -685,6 +683,30 @@ a.tl_simple_link-accent:hover{
 .tl_typography_accent{
     color: #F27404;
 }
+
+.tl_gh .tl_gh_result .tl_gh_result_heading{
+    background-color:#003642;
+    color:#b3b3b3;
+}
+.tl_gh .tl_gh_result .tl_gh_result_item:nth-child(even) {
+    background-color:#00191e;
+    color:#fff;
+}
+.tl_gh .tl_gh_result .tl_gh_result_item:nth-child(odd) {
+    background-color:#001d23;
+    color:#fff;
+}
+.paging li > .pi{
+    color:#b3b3b3;
+}
+.paging li > .pi.page{
+    color:#fff;
+}
+.paging li > .pi.page:hover,
+.paging li > .pi.active{
+    background-color:#003642;
+}
+
 
 
 

@@ -14,11 +14,7 @@ body{
     width: 150px;
     height: 32px;
 }
-.header__left__logo{
-    background-image: url(/Img/partners/111/logoSm.png);
-    width: 50px;
-    height: 32px;
-}
+
 @media screen and (max-width: 1500px){
     .tl_logo a {
         background-image: url(/Img/partners/111/logoSm.png);
@@ -54,13 +50,15 @@ a.tl_btn:hover,
 
 .tl_btn-accent,
 a.tl_btn-accent,
-.add_game_popup .moregame {
+.add_game_popup .moregame,
+.tl_gh .tl_search_button {
     background-color: #00E777;
     color: #000;
 }
 .tl_btn-accent:hover,
 a.tl_btn-accent:hover,
-.add_game_popup .moregame:hover {
+.add_game_popup .moregame:hover,
+.tl_gh .tl_search_button:hover {
     background-color: #00b45d;
     color: #000;
 }
@@ -685,6 +683,30 @@ a.tl_simple_link-accent:hover{
 .tl_typography_accent{
     color: #00E777;
 }
+
+.tl_gh .tl_gh_result .tl_gh_result_heading{
+    background-color:#313131;
+    color:#b3b3b3;
+}
+.tl_gh .tl_gh_result .tl_gh_result_item:nth-child(even) {
+    background-color:#434343;
+    color:#fff;
+}
+.tl_gh .tl_gh_result .tl_gh_result_item:nth-child(odd) {
+    background-color:#404040;
+    color:#fff;
+}
+.paging li > .pi{
+    color:#b3b3b3;
+}
+.paging li > .pi.page{
+    color:#fff;
+}
+.paging li > .pi.page:hover,
+.paging li > .pi.active{
+    background-color:#313131;
+}
+
 
 
    
