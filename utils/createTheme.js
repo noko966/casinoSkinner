@@ -19,14 +19,14 @@ function createTheme(config) {
     let leafView = _config.leafView || false;
 
     let defaultLogo = {
-        big: "/Img/partners/1/big.png", 
-        small: "/Img/partners/1/small.png",
-        widthBig: 150,
-        heightBig: 32,
-        widthSmall: 50,
-        heightSmall: 32,
-        };
-    
+        bigUrl: "/Img/partners/1/big.png",
+        bigWidth: 150,
+        bigHeight: 32,
+        smallUrl: "/Img/partners/1/small.png",
+        smallWidth: 50,
+        smallHeight: 32,
+    };
+
     let logoConfig = _config.logo || {};
 
     let logo = Object.assign(defaultLogo, logoConfig);

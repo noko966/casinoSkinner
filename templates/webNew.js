@@ -17,20 +17,20 @@ body{
 }
 .tl_logo a,
 .active .header__left__logo {
-    background-image: url(${c.logo.big});
-    width: ${c.logo.widthBig}px;
-    height: ${c.logo.heightBig}px;
+    background-image: url(${c.logo.bigUrl});
+    width: ${c.logo.bigWidth}px;
+    height: ${c.logo.bigHeight}px;
 }
 
 @media screen and (max-width: 1500px){
     .tl_logo a {
-        background-image: url(${c.logo.small});
-        width: ${c.logo.widthSmall}px;
-        height: ${c.logo.heightSmall}px;
+        background-image: url(${c.logo.smallUrl});
+        width: ${c.logo.smallWidth}px;
+        height: ${c.logo.smallHeight}px;
     }
 }
 .tl_logo_space_imitator{
-    width: ${c.logo.widthBig}px;
+    width: ${c.logo.bigWidth}px;
     flex-shrink: 0;
 }
 .tl_btn,

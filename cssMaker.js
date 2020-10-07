@@ -1,46 +1,37 @@
 const fs = require("fs");
 
-const web = require("./templates/web");
-const mobile = require("./templates/mobile");
+// const mobile = require("./templates/mobile");
 const webNew = require("./templates/webNew");
 
-const { createTheme } = require('./utils/createTheme')
+const {
+  createTheme
+} = require('./utils/createTheme')
 
-let configs = [
-  {
+let configs = [{
     fileName: 'cb',
     primaryBg: '#1a1a1a',
-    accent:'#00E777',
+    accent: '#00E777',
     borderRadius: '2',
     spacing: '4',
     generateDarkTints: false,
     customCasinoAccent: '#ffb700',
     logo: {
-      big: "/Img/partners/111/logoBig.png",
-      small: "/Img/partners/111/logoSm.png",
-      widthBig: 150,
-      heightSmall: 32,
-      widthSmall: 50,
-      heightSmall: 32,
+      bigUrl: "/Img/partners/1/big.png",
+      bigWidth: 150,
+      bigHeight: 32,
+      smallUrl: "/Img/partners/1/small.png",
+      smallWidth: 50,
+      smallHeight: 32,
     },
   },
   {
     fileName: 'oynabet',
     primaryBg: '#005C70',
-    accent:'#F27404',
+    accent: '#F27404',
     borderRadius: '2',
     spacing: '4',
     generateDarkTints: true,
   },
-  // {
-  //   fileName: 'light',
-  //   primaryBg: '#fff',
-  //   accent:'#ffb700',
-  //   borderRadius: '2',
-  //   spacing: '4',
-  //   generateDarkTints: true,
-  //   headerBg: '#f00'
-  // }
 ];
 
 
@@ -57,7 +48,3 @@ configs.forEach(c => {
     }
   );
 })
-
-
-
-
