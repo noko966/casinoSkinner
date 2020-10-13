@@ -1,27 +1,20 @@
-const leafViewCss = `
-    border-top-right-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-`;
 
-function mobile(c) {
-
-    return `
     /*main*/
     .LogoMobilePlatform {
-      background-image: url(${c.logo.smallUrlMobile});
-      width: ${c.logo.smallWidthMobile}px;
-      height: ${c.logo.smallHeightMobile}px;
+      background-image: url(undefined);
+      width: 50px;
+      height: 32px;
     }
     @media screen and (min-width: 433px){
       .LogoMobilePlatform {
-          background-image: url(${c.logo.bigUrlMobile});
-          width: ${c.logo.bigWidthMobile}px;
-          height: ${c.logo.bigHeightMobile}px;
+          background-image: url(/img/mobile/partners/111/big.png);
+          width: 150px;
+          height: 32px;
       }
     }
     body, #wrapper{
-        background-color:${c.customBodyBg2};
-        color:${c.customBodyTxt};
+        background-color:#313131;
+        color:#fff;
     }
     .bgMain,
     .ui-collapsible-content {
@@ -39,44 +32,44 @@ function mobile(c) {
    
     /*header*/
     #header {
-        background-color: ${c.headerBg} !important;
-        color: ${c.headerTxt};
+        background-color: #1a1a1a !important;
+        color: #fff;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
     #header a{
-        color: ${c.headerTxt};
+        color: #fff;
     }
     .LinkToLeftPanel,
     a.LinkToLeftPanel,
     #menu-right .arrow:after {
-        color: ${c.headerTxt};
+        color: #fff;
     }    
     .btn_sec,
     a.btn_sec {
-        background-color: ${c.primaryBg3} !important;
-        color: ${c.primaryTxt2} !important;
+        background-color: #434343 !important;
+        color: #b3b3b3 !important;
     }
     
     .btn_prim,
     a.btn_prim {
-        background-color: ${c.accent} !important;
-        color: ${c.accentTxt} !important;
+        background-color: #00E777 !important;
+        color: #000 !important;
     }
     
     /*main nav*/
     .landing_contet {
-      background-color:${c.customBodyBg2} !important;
-      color:${c.customBodyTxt};
+      background-color:#313131 !important;
+      color:#fff;
     }
     .nav_item {
-        background-color: ${c.primaryBgTransparent} !important;
+        background-color: rgba(26,26,26,0.877) !important;
         border-radius: 8px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
     
     .nav_title {
         font-size: 14px;
-        color: ${c.primaryTxt};
+        color: #fff;
     }
     
     .nav_item > img {
@@ -89,8 +82,8 @@ function mobile(c) {
     #left-panel,
     #language-panel,
     #right-panel {
-        background-color: ${c.customBodyBg2} !important;
-        color: ${c.customBodyTxt} !important;
+        background-color: #313131 !important;
+        color: #fff !important;
     }
     .menuBtn,
     a.menuBtn,
@@ -98,37 +91,37 @@ function mobile(c) {
     a.menuBtnSm,
     .menuRow,
     a.menuRow {
-        background-color: ${c.customBodyBg3};
-        color: ${c.customBodyTxt} !important;
+        background-color: #434343;
+        color: #fff !important;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
     
     .menuBtn a,
     a.menuBtn a {
-        color: ${c.customBodyTxt} !important;
+        color: #fff !important;
     }
     
     .collapse_dropdown_leftmenu_btn:after {
-        border-color: ${c.customBodyTxt} transparent transparent transparent;
+        border-color: #fff transparent transparent transparent;
     }
     
     .platformLoginInput,
     .platformPassInput {
-        background-color: ${c.customBodyBg2};
-        color: ${c.customBodyTxt} !important;
+        background-color: #313131;
+        color: #fff !important;
     }
     
     /*widget name*/
     .name_vidget {
-        background-color: ${c.primaryBgTransparent};
-        color: ${c.primaryTxt} !important;
+        background-color: rgba(26,26,26,0.877);
+        color: #fff !important;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
     
     /*footer*/
     #footer{
-        background-color:${c.footerBg} !important;
-        color:${c.footerTxt2};
+        background-color:#1a1a1a !important;
+        color:#b3b3b3;
         padding: 24px 16px 100px 16px;
     }
     .MobileIcon{
@@ -142,12 +135,12 @@ function mobile(c) {
     .footer_title,
     .footer_links a {
         font-size: 13px;
-        color:${c.footerTxt2};
+        color:#b3b3b3;
     }
     
     .cannon_footer_txt,
     #copyright {
-        color:${c.footerTxt2};
+        color:#b3b3b3;
     }
     .promoted span:after {
         position: absolute;
@@ -161,30 +154,30 @@ function mobile(c) {
         text-align:center;
         font-size:8px;
         border-radius:4px;
-        background-color:${c.accent};
-        color:${c.accentTxt};
+        background-color:#00E777;
+        color:#000;
     }
     
     /*payments*/
     .heading {
-        background-color: ${c.customBodyBg2} !important;
-        color: ${c.accent} !important;
-        border-bottom: 2px solid ${c.accent};
+        background-color: #313131 !important;
+        color: #00E777 !important;
+        border-bottom: 2px solid #00E777;
     }
     .tl_mail_header:before{
-        color: ${c.accent} !important;
+        color: #00E777 !important;
     }
     #content_paym .paym_txt1,
     #content_paym .paym_txt,
     #content_paym .paym_cond {
-        color: ${c.customBodyTxt};
+        color: #fff;
     }
     #content_paym .paym_cond > span {
-        color: ${c.customBodyTxt};
+        color: #fff;
     }
     .collapse_btn h3 > a {
-        background-color: ${c.customBodyBg};
-        color: ${c.customBodyTxt} !important;
+        background-color: #1a1a1a;
+        color: #fff !important;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         border: 0;
     }
@@ -193,69 +186,69 @@ function mobile(c) {
     }
     #content_paym label,
     .required-field {
-        color: ${c.customBodyTxt};
+        color: #fff;
     }
     #content_paym .inp {
-        background-color: ${c.customBodyBg3};
-        color: ${c.customBodyTxt};
+        background-color: #434343;
+        color: #fff;
     }
 
     /*my account*/
     .accRowClr{
-        background-color: ${c.customBodyBg};
-        color: ${c.customBodyTxt};
+        background-color: #1a1a1a;
+        color: #fff;
     }
     .accRowClr td{
-        color: ${c.customBodyTxt};
+        color: #fff;
     }
     .ui-input-text input,
     .tl_mail_send_area,
     .ui-select{
-      background-color: ${c.customBodyBg3};
-      color: ${c.customBodyTxt2};
+      background-color: #434343;
+      color: #b3b3b3;
     }
     /*inbox*/
     .deleteAll_icon, .readAll_icon {
-      color: ${c.customBodyTxt2};
+      color: #b3b3b3;
       padding: 9px 8px;
     }
     .tl_mail_item,
     .tl_mail_row,
     .tl_mail_message_body{
-      background-color: ${c.customBodyBg};
-      color: ${c.customBodyTxt2};
+      background-color: #1a1a1a;
+      color: #b3b3b3;
     }
     .tl_mail_icon,
     .tl_mail_details_title,
     .tl_mail_details_title{
-      color: ${c.customBodyTxt2};
+      color: #b3b3b3;
     }
     .tl_mail_details,
     .tl_mail_attachfiel_screp{
-      color: ${c.customBodyTxt};
+      color: #fff;
     }
     .tl_mail_msgId{
-      color: ${c.accent};
+      color: #00E777;
     }
     .tl_mail_attachfiel_download_btn{
-      background-color: ${c.customBodyBg};
-      color: ${c.customBodyTxt2};
+      background-color: #1a1a1a;
+      color: #b3b3b3;
     }
     /*profile*/
     .reg_prof__element_row label{
-      color: ${c.customBodyTxt};
+      color: #fff;
     }
 
     /*promotions*/
     .filters_slider_cont{
-      background-color: ${c.customBodyBg};
-      color: ${c.customBodyTxt2};
+      background-color: #1a1a1a;
+      color: #b3b3b3;
     }
     .tl_prom_slider_items.btn_sec{
-      color: ${c.customBodyTxt2} !important;
+      color: #b3b3b3 !important;
     }
     .tl_prom_slider_items.btn_sec.promo_clicked{
-      color: ${c.accent} !important;
+      color: #00E777 !important;
     }
     #slideLeft {
       background-color: rgba(0, 0, 0, 0.3);
@@ -270,34 +263,34 @@ function mobile(c) {
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
     }
     .promo_mobile_cont{
-      background-color: ${c.customBodyBg};
-      color: ${c.customBodyTxt};
+      background-color: #1a1a1a;
+      color: #fff;
     }
     .promo_mobile_title{
-      color: ${c.accent};
+      color: #00E777;
     }
     .tl_promotions_more_info {
-      background-color: ${c.customBodyBg3};
-      color: ${c.customBodyTxt} !important;
+      background-color: #434343;
+      color: #fff !important;
     }
 
 
     /*casino*/
     .casino_nav__links_block {
-      background-color: ${c.customBodyBg};
-      color: ${c.customBodyTxt};
+      background-color: #1a1a1a;
+      color: #fff;
     }
     a.casino_nav_links_mob,
     .casino_nav_links_mob{
-      color: ${c.customBodyTxt};
+      color: #fff;
     }
     a.casino_nav_links_mob.active,
     .casino_nav_links_mob.active{
-      color: ${c.accent};
+      color: #00E777;
     }
     .casino__container .New:after{
-      background-color: ${c.accent};
-      color: ${c.accentTxt};
+      background-color: #00E777;
+      color: #000;
     }
     .casino__container .New:before {
       content: "";
@@ -307,27 +300,23 @@ function mobile(c) {
       top: 15px;
       right: -10px;
       z-index: 4;
-      border-top-color: ${c.accent};
-      border-right-color: ${c.accent};
+      border-top-color: #00E777;
+      border-right-color: #00E777;
     }
     /*casino sticky menu bot*/
     .fixed_menu__play_button{
-      background-color: ${c.customBodyBg2};
-      color: ${c.customBodyTxt};
+      background-color: #313131;
+      color: #fff;
     }
     .menu_circle:before {
-      box-shadow: 4px 3px 40px 1200px ${c.customBodyBg2};
+      box-shadow: 4px 3px 40px 1200px #313131;
     }
     .fixed_menu__li {
-      color: ${c.customBodyTxt};
+      color: #fff;
     }
     .fixed_menu__li.active {
-      color: ${c.accent};
+      color: #00E777;
     }
 
 
-  `
-}
-
-
-module.exports = mobile;
+  

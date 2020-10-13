@@ -19,12 +19,19 @@ function createTheme(config) {
     let leafView = _config.leafView || false;
 
     let defaultLogo = {
-        bigUrl: "/Img/partners/1/big.png",
+        bigUrl: "/Img/partners/111/big.png",
         bigWidth: 150,
         bigHeight: 32,
-        smallUrl: "/Img/partners/1/small.png",
+        smallUrl: "/Img/partners/111/small.png",
         smallWidth: 50,
         smallHeight: 32,
+
+        bigUrlMobile: "/img/mobile/partners/111/big.png",
+        bigWidthMobile: 150,
+        bigHeightMobile: 32,
+        smallUrMobilel: "/img/mobile/partners/111/small.png",
+        smallWidthMobile: 50,
+        smallHeightMobile: 32,
     };
 
     let logoConfig = _config.logo || {};
@@ -120,9 +127,13 @@ function createTheme(config) {
     if (_config.footerBg) {
         footerBg = _config.footerBg;
         footerTxt = guessVisibleColor(footerBg);
+        footerTxt2 = footerTxt === "#000" ?
+            lighten(0.3, footerTxt) :
+            darken(0.3, footerTxt);
     } else {
         footerBg = customBodyBg;
         footerTxt = customBodyTxt;
+        footerTxt2 = customBodyTxt2;
     }
 
 
@@ -170,6 +181,8 @@ function createTheme(config) {
 
         footerBg: footerBg,
         footerTxt: footerTxt,
+        footerTxt2: footerTxt2,
+
 
 
         tabBg: tabBg,

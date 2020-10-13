@@ -10,14 +10,14 @@ body{
 }
 .tl_logo a,
 .active .header__left__logo {
-    background-image: url(/Img/partners/1/big.png);
+    background-image: url(/Img/partners/111/big.png);
     width: 150px;
     height: 32px;
 }
 
 @media screen and (max-width: 1500px){
     .tl_logo a {
-        background-image: url(/Img/partners/1/small.png);
+        background-image: url(/Img/partners/111/small.png);
         width: 50px;
         height: 32px;
     }
